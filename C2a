@@ -1,0 +1,13 @@
+function makeLine(length){
+  var line ="";
+  for(var i =1; i<=length; i++){
+    line+= "#";
+  }
+  return line + "\n";
+}
+
+function makeTriangle(len){
+  for(var j = 1; j <=len; j++){
+    console.log(makeLine(j));
+  }
+}
