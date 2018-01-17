@@ -1,0 +1,22 @@
+//bean count
+function countBs(text){
+    var count = 0;
+    for(var i = 0; i < text.length; i++){
+        if(text[i] === "B"){
+            count+= 1;
+        }
+    }return count;
+}
+console.log(countBs("b"));
+
+
+//bean count2
+function countChar(text, letter){
+    var count = 0;
+    for(var i = 0; i < text.length; i++){
+        if(text[i] === letter){
+            count+= 1;
+        }
+    }return count;
+}
+console.log(countChar("BBC","a"));
