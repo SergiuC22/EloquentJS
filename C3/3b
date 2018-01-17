@@ -1,22 +1,21 @@
-//bean count
-function countBs(text){
-    var count = 0;
-    for(var i = 0; i < text.length; i++){
-        if(text[i] === "B"){
-            count+= 1;
-        }
-    }return count;
+//Function parameters is a int
+function isEven(number){
+    //String manipulation
+    var numberString = number.toString();
+    var x = numberString.length;
+    if(numberString[x-1] === '0'){
+        return true;
+    } else if(numberString[x-1] === '1'){
+        return false;
+    }else{
+        //Number manipulation
+        var newNR = number - 2;
+        return isEven(newNR);
+    }
 }
-console.log(countBs("b"));
 
 
-//bean count2
-function countChar(text, letter){
-    var count = 0;
-    for(var i = 0; i < text.length; i++){
-        if(text[i] === letter){
-            count+= 1;
-        }
-    }return count;
-}
-console.log(countChar("BBC","a"));
+//console.log(isEven(75));
+//console.log(isEven(75));
+//console.log(isEven(-1));
+//console.log(isEven(-2));
