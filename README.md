@@ -1,1 +1,1 @@
-# EloquentJS
+Exercises build from EloquentJS book.
