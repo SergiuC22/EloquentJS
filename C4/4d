@@ -1,0 +1,51 @@
+var obj = {
+    here: {
+        is: "an"
+    },
+    object: 2
+};
+
+function deepEqual(a, b) {
+    //if both are objects do deep comparation
+    if (!(typeof a == "object" && a != null) && (typeof b == "object" && b != null)) {
+        return false;
+    }
+
+    //test if objects length are the same
+    var lena = Object.keys(a).length;
+    var lenb = Object.keys(b).length;
+    if (lena !== lenb) {
+        return false;
+    }
+
+    //test if object proprieties are the same
+    var aProps = Object.keys(a);
+    var bProps = Object.keys(b);
+    var length = Object.keys(b).length;
+
+
+
+    for (let i = 0; i < length; i++) {
+        if (aProps[i] !== bProps[i]) {
+            //console.log("debug2");
+            return false;
+        }
+    }
+
+
+
+    //test if object values are the same
+    var aValue = Object.values(a);
+    var bValue = Object.values(b);
+    for (let i = 0; i < length; i++) {
+        if (aValue[i] !== bValue[i]) {
+            //console.log("debug3");
+            return false;
+        }
+    }
+
+    return true;
+}
+
+
+console.log(deepEqual(obj, 1));
